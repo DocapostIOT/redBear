@@ -776,66 +776,6 @@ void loop() {
                 str = String(moyenne);
                 Particle.publish("son", str, PRIVATE);
             }
-/*
-           if (col == 1){
-               col = 0;
-               if(client2.connect("docapost-iot.cspvdi.fr", 80)){
-                        str = "POST /api/teamIOapp/humi?";
-                        str.concat(t);
-                        str.concat(" HTTP/1.0");
-                                                Serial.println(str);
-
-
-                        client2.println(str);
-                        client2.println("Host: docapost-iot.cspvdi.fr");
-                        client2.println("Content-Length: 0");
-                        client2.println();
-                        if (client2.available())
-                          {
-                            char c = client2.read();
-                            Serial.print(c);
-                            c = client2.read();
-                            Serial.print(c);
-                          }
-                        client2.stop();
-            }
-
-
-               if(client.connect("docapost-iot.cspvdi.fr", 80)){
-                        str = "POST /api/teamIOapp/son?";
-                        str.concat(moyenne);
-                        str.concat(" HTTP/1.0");
-                        Serial.println(str);
-                        client.println(str);
-                        client.println("Host: docapost-iot.cspvdi.fr");
-                        client.println("Content-Length: 0");
-                        client.println();
-                        client.stop();
-
-
-            }
-
-
-            if(client1.connect("docapost-iot.cspvdi.fr", 80)){
-                        str = "POST /api/teamIOapp/temp?";
-                        str.concat(celsius);
-                        str.concat(" HTTP/1.0");
-                         Serial.println(str);
-
-
-                        client1.println(str);
-                        client1.println("Host: docapost-iot.cspvdi.fr");
-                        client1.println("Content-Length: 0");
-                        client1.println();
-                        client1.stop();
-
-
-            }
-
-           }
-
-           */
-
             moyenne = 0;
             nb_moy = 0;
             i = 0;
